@@ -1,0 +1,7 @@
+// Текст для оверлея секції Works; "Підпишіться на розсилку", "Приєднуйтесь" - у футері
+.title {
+  @include font(null, 1.14, 700, null);
+  text-transform: uppercase;
+
+  color: var(--white-color);
+}

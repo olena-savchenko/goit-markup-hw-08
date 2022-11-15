@@ -1,0 +1,28 @@
+.benefits__list {
+  display: flex;
+  gap: 30px;
+}
+
+.benefits__item {
+  width: calc((100% - 90px) / 4);
+}
+
+.benefits__icon {
+  @extend %flex-centered;
+
+  height: 120px;
+  margin-bottom: 30px;
+
+  background-color: var(--secondary-bgr);
+  border-radius: 4px;
+}
+.benefits__title {
+  margin-bottom: 10px;
+  @include font(14px, 1.14, null, null);
+  text-transform: uppercase;
+
+  color: var(--title-color);
+}
+.benefits__txt {
+  line-height: 1.71;
+}

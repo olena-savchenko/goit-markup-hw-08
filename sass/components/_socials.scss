@@ -1,0 +1,28 @@
+.socials {
+ @extend %flex-centered;
+  gap: 10px;
+}
+.socials__item {
+  width: 44px;
+  height: 44px;
+}
+.socials__link {
+ @extend %flex-centered;
+  width: 100%;
+  height: 100%;
+
+  color: var(--social-link-color);
+  border-radius: 50%;
+  outline: transparent;
+
+  transition: background-color var(--timing-function), color var(--timing-function);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--white-color);
+  }
+}
+.socials__icon {
+  fill: currentColor;
+}
