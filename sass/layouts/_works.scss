@@ -1,5 +1,10 @@
 .works {
+  display: none;
   padding-top: 0;
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
 }
 
 .works__list {
@@ -9,7 +14,6 @@
 
 .works__item {
   position: relative;
-
   width: calc((100% - 60px) / 3);
 }
 .works__overlay {

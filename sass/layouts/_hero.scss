@@ -6,7 +6,8 @@
   margin: 0 auto;
 
   background-color: var(--hero-footer-bgr);
-  background-image: linear-gradient(var(--gradient-hero-bgr), var(--gradient-hero-bgr)), url(../images/hero.jpg);
+  background-image: linear-gradient(var(--gradient-hero-bgr), var(--gradient-hero-bgr)),
+    url(../images/hero.jpg);
 
   background-size: cover;
   background-position: center;
@@ -19,11 +20,23 @@
   margin: 0 auto;
   margin-bottom: 30px;
 
-  @include font(44px, 1.36, 900, 0.06em);
+  @include font(26px, 1.62, 900, 0.06em);
   text-transform: uppercase;
   text-align: center;
 
   color: var(--white-color);
+  @media screen and (min-width: 768px) {
+    max-width: 360px;
+  }
+  @media screen and (min-width: 1200px) {
+
+    // @include font(44px, 1.36, 900, 0.06em);
+    font-size: 44px;
+    line-height: 1.36;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    max-width: 696px;
+  }
 }
 
 .hero__btn {

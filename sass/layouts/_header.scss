@@ -9,10 +9,10 @@
   color: var(--black-color);
 }
 .menu {
-  display: flex;
+  display: none;
   gap: 50px;
   margin-left: 93px;
-  
+
   @include font(null, 1.14, 500, 0.02em);
 }
 .menu__item {
@@ -39,7 +39,7 @@
   color: var(--accent-color);
 
   &::after {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     left: 0;
@@ -54,10 +54,10 @@
 }
 
 .contact {
-  display: flex;
+  display: none;
   gap: 50px;
   margin-left: auto;
- 
+
   @include font(null, 1.14, 500, 0.02em);
   color: currentColor;
 }

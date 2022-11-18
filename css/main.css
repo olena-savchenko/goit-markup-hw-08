@@ -30,24 +30,6 @@
   --timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-body {
-  font-family: "Roboto", sans-serif;
-  font-size: var(--font-size);
-  letter-spacing: var(--letter-spacing);
-  color: var(--primary-color);
-  background-color: var(--primary-bgr);
-}
-
-.section {
-  padding: 94px 0;
-}
-
-.container {
-  width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
 h1,
 h2,
 h3,
@@ -72,6 +54,7 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  width: 100%;
 }
 
 a {
@@ -82,7 +65,7 @@ address {
   font-style: normal;
 }
 
-.filter, .subscription, .clients__link, .works__overlay, .benefits__icon, .order-form__check-label, .modal__close-btn, .socials__link, .socials {
+.clients__link, .works__overlay, .benefits__icon, .order-form__check-label, .modal__close-btn, .socials__link, .socials {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,6 +85,44 @@ address {
   overflow: hidden;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--font-size);
+  letter-spacing: var(--letter-spacing);
+  color: var(--primary-color);
+  background-color: var(--primary-bgr);
+}
+
+.section {
+  padding: 60px 0;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding: 94px 0;
+  }
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
 .logo {
   font-family: "Raleway", sans-serif;
   font-size: 26px;
@@ -112,7 +133,7 @@ address {
 
 .section-title {
   margin-bottom: 50px;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
   color: var(--title-color);
@@ -333,7 +354,7 @@ address {
 }
 
 .menu {
-  display: flex;
+  display: none;
   gap: 50px;
   margin-left: 93px;
   line-height: 1.14;
@@ -373,7 +394,7 @@ address {
 }
 
 .contact {
-  display: flex;
+  display: none;
   gap: 50px;
   margin-left: auto;
   line-height: 1.14;
@@ -418,13 +439,27 @@ address {
   max-width: 696px;
   margin: 0 auto;
   margin-bottom: 30px;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   font-weight: 900;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   text-align: center;
   color: var(--white-color);
+}
+@media screen and (min-width: 768px) {
+  .hero__title {
+    max-width: 360px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.36;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    max-width: 696px;
+  }
 }
 
 .hero__btn {
@@ -433,11 +468,22 @@ address {
 
 .benefits__list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
 .benefits__item {
-  width: calc((100% - 90px) / 4);
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .benefits__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .benefits__item {
+    width: calc((100% - 90px) / 4);
+  }
 }
 
 .benefits__icon {
@@ -452,6 +498,7 @@ address {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  text-align: center;
   color: var(--title-color);
 }
 
@@ -460,7 +507,13 @@ address {
 }
 
 .works {
+  display: none;
   padding-top: 0;
+}
+@media screen and (min-width: 1200px) {
+  .works {
+    display: block;
+  }
 }
 
 .works__list {
@@ -488,19 +541,31 @@ address {
 
 .team__list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
 .team__item {
-  width: calc((100% - 90px) / 4);
+  width: 100%;
   background-color: var(--primary-bgr);
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+@media screen and (min-width: 768px) {
+  .team__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__item {
+    width: calc((100% - 90px) / 4);
+  }
 }
 
 .team__wrap {
   padding-top: 30px;
   padding-bottom: 30px;
+  text-align: center;
 }
 
 .team__member {
@@ -508,7 +573,6 @@ address {
   font-size: 16px;
   line-height: 1.19;
   font-weight: 500;
-  text-align: center;
   color: var(--title-color);
 }
 
@@ -516,17 +580,27 @@ address {
   margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.19;
-  text-align: center;
 }
 
 .clients__list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
 .clients__item {
-  width: calc((100% - 150px) / 6);
+  width: calc((100% - 30px) / 2);
   height: 92px;
+}
+@media screen and (min-width: 768px) {
+  .clients__item {
+    width: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__item {
+    width: calc((100% - 150px) / 6);
+  }
 }
 
 .clients__link {
@@ -553,12 +627,26 @@ address {
 }
 
 .footer__container {
-  display: flex;
-  align-items: baseline;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .footer__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    text-align: start;
+    justify-content: space-between;
+  }
 }
 
-.contact-wrap {
-  margin-right: 70px;
+.contact-wrap,
+.socials-wrap {
+  margin-bottom: 60px;
 }
 
 .footer__logo {
@@ -598,16 +686,19 @@ address {
   margin-bottom: 20px;
 }
 
-.subscribe {
-  margin-left: auto;
-}
-
 .subscription {
-  gap: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .subscription {
+    gap: 12px;
+  }
 }
 
 .subscription__input {
-  width: 358px;
+  width: 100%;
   height: 50px;
   padding-left: 16px;
   color: var(--opacity-white-color);
@@ -631,6 +722,11 @@ address {
   letter-spacing: 0.03em;
   color: var(--opacity-white-color);
 }
+@media screen and (min-width: 1200px) {
+  .subscription__input {
+    width: 358px;
+  }
+}
 
 .subscription__btn {
   padding: 10px 28px;
@@ -645,6 +741,7 @@ address {
 }
 
 .filter {
+  display: flex;
   margin-bottom: 50px;
   gap: 8px;
 }
@@ -670,6 +767,11 @@ address {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+.filter__btn--active {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+}
+
 /*--------------------- Проекти-------------------- */
 .projects {
   display: flex;
@@ -678,7 +780,12 @@ address {
 }
 
 .projects__item {
-  width: calc((100% - 60px) / 3);
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .projects__item {
+    width: calc((100% - 30px) / 2);
+  }
 }
 
 .projects__link {
