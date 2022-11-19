@@ -125,10 +125,15 @@ body {
 
 .logo {
   font-family: "Raleway", sans-serif;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.19;
   font-weight: 700;
   color: var(--accent-color);
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+  }
 }
 
 .section-title {
@@ -343,23 +348,50 @@ body {
 .header {
   border-bottom: 1px solid var(--header-border-color);
 }
+@media screen and (max-width: 767px) {
+  .header {
+    padding-top: 10px;
+    padding-bottom: 9px;
+  }
+}
 
 .header__container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .header__logo {
   color: var(--black-color);
 }
 
+.nav__btn {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+@media screen and (min-width: 768px) {
+  .nav__btn {
+    display: none;
+  }
+}
+
 .menu {
   display: none;
-  gap: 50px;
-  margin-left: 93px;
-  line-height: 1.14;
-  font-weight: 500;
-  letter-spacing: 0.02em;
+}
+@media screen and (min-width: 768px) {
+  .menu {
+    display: flex;
+    gap: 50px;
+    margin-left: 87px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .menu {
+    margin-left: 93px;
+  }
 }
 
 .menu__item {
@@ -370,6 +402,9 @@ body {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+  line-height: 1.14;
+  font-weight: 500;
+  letter-spacing: 0.02em;
   color: var(--title-color);
   outline: transparent;
   transition: color var(--timing-function);
@@ -395,20 +430,29 @@ body {
 
 .contact {
   display: none;
-  gap: 50px;
-  margin-left: auto;
-  line-height: 1.14;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  color: currentColor;
+}
+@media screen and (min-width: 768px) {
+  .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact {
+    flex-direction: row;
+    gap: 30px;
+  }
 }
 
 .contact__link {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  font-size: 12px;
+  line-height: 1.14;
+  font-weight: 500;
+  letter-spacing: 0.02em;
   color: currentColor;
   outline: transparent;
   transition: color var(--timing-function);
@@ -416,27 +460,45 @@ body {
 .contact__link:hover, .contact__link:focus {
   color: var(--accent-color);
 }
+@media screen and (min-width: 1200px) {
+  .contact__link {
+    font-size: 14px;
+  }
+}
 
 .contact__icon {
   fill: currentColor;
 }
 
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
-  max-width: 1600px;
-  height: 600px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  max-width: 100%;
+  height: auto;
   margin: 0 auto;
   background-color: var(--hero-footer-bgr);
-  background-image: linear-gradient(var(--gradient-hero-bgr), var(--gradient-hero-bgr)), url(../images/hero.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
+@media screen and (min-width: 480px) {
+  .hero {
+    background-image: linear-gradient(var(--gradient-hero-bgr), var(--gradient-hero-bgr)), url(../images/hero-mobile.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(var(--gradient-hero-bgr), var(--gradient-hero-bgr)), url(../images/hero-tablet.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(var(--gradient-hero-bgr), var(--gradient-hero-bgr)), url(../images/hero.jpg);
+  }
+}
 
 .hero__title {
   display: block;
-  max-width: 696px;
   margin: 0 auto;
   margin-bottom: 30px;
   font-size: 26px;

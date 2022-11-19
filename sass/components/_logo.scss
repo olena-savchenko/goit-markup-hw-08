@@ -1,5 +1,9 @@
 .logo {
-  font-family: "Raleway", sans-serif;
-  @include font(26px, 1.19, 700, null);
+  font-family: 'Raleway', sans-serif;
+  @include font(24px, 1.19, 700, null);
   color: var(--accent-color);
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+  }
 }
