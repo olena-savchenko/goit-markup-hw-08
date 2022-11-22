@@ -2,7 +2,7 @@
   background-color: var(--secondary-bgr);
 }
 .team__list {
- display: flex;
+  display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
@@ -25,8 +25,11 @@
 
 .team__wrap {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
   text-align: center;
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 30px;
+  }
 }
 .team__member {
   margin-bottom: 10px;

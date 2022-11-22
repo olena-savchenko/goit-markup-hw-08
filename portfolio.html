@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header__container">
         <nav class="header__container">
           <a class="logo" href="./index.html">Web<span class="header__logo">Studio</span></a>
@@ -50,8 +50,66 @@
             >
           </li>
         </ul>
+        <button
+          class="burger-btn js-open-menu"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="40" height="40">
+            <use href="./images/sprite.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+
+      <!---------- MОБІЛЬНЕ МЕНЮ----------->
+      <div class="mobile-nav js-menu-container" id="mobile-menu">
+        <button class="mobile-nav__btn js-close-menu">
+          <svg width="40" height="40">
+            <use href="./images/sprite.svg#icon-nav-close"></use>
+          </svg>
+        </button>
+        <div class="mobile-nav__wrap-top">
+          <ul class="mobile-menu">
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="./index.html">Студія</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="./portfolio.html">Портфоліо</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="#">Контакти</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mobile-nav__wrap-bottom">
+          <ul class="mobile-contact">
+            <li class="mobile-contact__item">
+              <a class="mobile-contact__tel" href="tel:+380961111111">+38 096 111 11 11</a>
+            </li>
+            <li class="mobile-contact__item">
+              <a class="mobile-contact__address" href="mailto:info@devstudio.com" target="_blank">
+                info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile-socials">
+            <li class="mobile-socials__item">
+              <a class="mobile-socials__link" href="#">Instagram</a>
+            </li>
+            <li class="mobile-socials__item">
+              <a class="mobile-socials__link" href="#">Twitter</a>
+            </li>
+            <li class="mobile-socials__item">
+              <a class="mobile-socials__link" href="#">Facebook</a>
+            </li>
+            <li class="mobile-socials__item">
+              <a class="mobile-socials__link" href="#">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
     <main>
       <section class="section">
         <div class="container">
@@ -67,11 +125,35 @@
             <li class="projects__item">
               <a class="projects__link" href="#">
                 <div class="projects__img">
-                  <img
-                    src="./images/technokr.jpg"
-                    alt="Веб-сайт на екрані комп'ютера"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/techo-web-d-320.jpg 1x,
+                        ./images/desktop/techo-web-d-640.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/techo-web-t-320.jpg 1x,
+                        ./images/tablet/techo-web-t-640.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/techo-web-m-320.jpg 1x,
+                        ./images/mobile/techo-web-m-640.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+
+                    <img
+                      src="./images/mobile/techo-web-m-320.jpg"
+                      alt="Веб-сайт на екрані комп'ютера"
+                      width="450"
+                    />
+                  </picture>
                   <div class="projects__overlay">
                     <p class="projects__desc">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -89,7 +171,35 @@
             <li class="projects__item">
               <a class="projects__link" href="#">
                 <div class="projects__img">
-                  <img src="./images/poster.jpg" alt="Два баскетболісти" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/new-orlean-d-320.jpg 1x,
+                        ./images/desktop/new-orlean-d-640.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/new-orlean-t-320.jpg 1x,
+                        ./images/tablet/new-orlean-t-640.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/new-orlean-m-320.jpg 1x,
+                        ./images/mobile/new-orlean-m-640.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+
+                    <img
+                      src="./images/mobile/new-orlean-m-320.jpg"
+                      alt="Два баскетболісти"
+                      width="450"
+                    />
+                  </picture>
                   <div class="projects__overlay">
                     <p class="projects__desc">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -110,7 +220,35 @@
             <li class="projects__item">
               <a class="projects__link" href="#">
                 <div class="projects__img">
-                  <img src="./images/seafood.jpg" alt="Логотип ресторану" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/seafood-d-320.jpg 1x,
+                        ./images/desktop/seafood-d-320.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/seafood-t-320.jpg 1x,
+                        ./images/tablet/seafood-t-640.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/seafood-m-320.jpg 1x,
+                        ./images/mobile/seafood-m-640.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+
+                    <img
+                      src="./images/mobile/seafood-m-320.jpg"
+                      alt="Логотип ресторану"
+                      width="450"
+                    />
+                  </picture>
                   <div class="projects__overlay">
                     <p class="projects__desc">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -129,7 +267,31 @@
             <li class="projects__item">
               <a class="projects__link" href="#">
                 <div class="projects__img">
-                  <img src="./images/prime.jpg" alt="Навушники" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/headphones-d-320.jpg 1x,
+                        ./images/desktop/headphones-d-640.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/headphones-t-320.jpg 1x,
+                        ./images/tablet/headphones-t-640.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/headphones-m-320.jpg 1x,
+                        ./images/mobile/headphones-m-640.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+
+                    <img src="./images/mobile/headphones-m-320.jpg" alt="Навушники" width="450" />
+                  </picture>
                   <div class="projects__overlay">
                     <p class="projects__desc">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -148,7 +310,26 @@
             <li class="projects__item">
               <a class="projects__link" href="#">
                 <div class="projects__img">
-                  <img src="./images/boxes.jpg" alt="Двi коробки рiзного розмiру" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/desktop/box-d-320.jpg 1x, ./images/desktop/box-d-640.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/tablet/box-t-320.jpg 1x, ./images/tablet/box-t-640.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/mobile/box-m-320.jpg 1x, ./images/mobile/box-m-640.jpg 2x"
+                      media="(min-width: 320px)"
+                    />
+
+                    <img
+                      src="./images/mobile/box-m-320.jpg"
+                      alt="Двi коробки рiзного розмiру"
+                      width="450"
+                    />
+                  </picture>
                   <div class="projects__overlay">
                     <p class="projects__desc">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -167,7 +348,35 @@
             <li class="projects__item">
               <a class="projects__link" href="#">
                 <div class="projects__img">
-                  <img src="./images/inspiration.jpg" alt="Монiтор комп'ютера" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/website-d-320.jpg 1x,
+                        ./images/desktop/website-d-640.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/website-t-320.jpg 1x,
+                        ./images/tablet/website-t-640.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/website-m-320.jpg 1x,
+                        ./images/mobile/website-m-640.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+
+                    <img
+                      src="./images/mobile/website-m-320.jpg"
+                      alt="Монiтор комп'ютера"
+                      width="450"
+                    />
+                  </picture>
                   <div class="projects__overlay">
                     <p class="projects__desc">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -186,7 +395,35 @@
             <li class="projects__item">
               <a class="projects__link" href="#">
                 <div class="projects__img">
-                  <img src="./images/edition.jpg" alt="Вiдкритий журнал" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/edition-d-320.jpg 1x,
+                        ./images/desktop/edition-d-640.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/edition-t-320.jpg 1x,
+                        ./images/tablet/edition-t-640.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/edition-m-320.jpg 1x,
+                        ./images/mobile/edition-m-640.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+
+                    <img
+                      src="./images/mobile/edition-m-320.jpg"
+                      alt="Вiдкритий журнал"
+                      width="450"
+                    />
+                  </picture>
                   <div class="projects__overlay">
                     <p class="projects__desc">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -205,7 +442,35 @@
             <li class="projects__item">
               <a class="projects__link" href="#">
                 <div class="projects__img">
-                  <img src="./images/lab.jpg" alt="Бiрка з написом Lab El Tag" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/project-d-320.jpg 1x,
+                        ./images/desktop/project-d-640.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/project-t-320.jpg 1x,
+                        ./images/tablet/project-t-640.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                      ./images/mobile/project-m-320.jpg 2x
+                      ./images/mobile/project-m-640.jpg 1x,
+                      "
+                      media="(min-width: 320px)"
+                    />
+
+                    <img
+                      src="./images/mobile/project-m-320.jpg"
+                      alt="Бiрка з написом Lab El Tag"
+                      width="450"
+                    />
+                  </picture>
                   <div class="projects__overlay">
                     <p class="projects__desc">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -224,7 +489,34 @@
             <li class="projects__item">
               <a class="projects__link" href="#">
                 <div class="projects__img">
-                  <img src="./images/business.jpg" alt="Людина працює за комп'ютером" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/growing-business-d-320.jpg 1x,
+                        ./images/desktop/growing-business-d-640.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/growing-business-t-320.jpg 1x,
+                        ./images/tablet/growing-business-t-640.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                    ./images/mobile/growing-business-m-320.jpg 2x
+                    ./images/mobile/growing-business-m-640.jpg 1x,
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
+                      src="./images/mobile/growing-business-m-320.jpg"
+                      alt="Людина працює за комп'ютером"
+                      width="450"
+                    />
+                  </picture>
                   <div class="projects__overlay">
                     <p class="projects__desc">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -244,25 +536,35 @@
         </div>
       </section>
     </main>
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container footer__container">
         <div class="contact-wrap">
           <a class="logo" href="./index.html">Web<span class="footer__logo">Studio</span></a>
           <address class="address">
             <ul class="address__list">
               <li class="address__item">
-                <a class="address__link" href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9" target="_blank" rel="noopener noreferrer nofollow">м. Київ, пр-т Лесі Українки, 26</a>
+                <a
+                  class="address__link"
+                  href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >м. Київ, пр-т Лесі Українки, 26</a
+                >
               </li>
               <li class="address__item">
-                <a class="address__link address__link--opacity" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                <a class="address__link address__link--opacity" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
               </li>
               <li>
-                <a class="address__link address__link--opacity" href="tel:+380961111111">+38 096 111 1111</a>
+                <a class="address__link address__link--opacity" href="tel:+380961111111"
+                  >+38 096 111 1111</a
+                >
               </li>
             </ul>
           </address>
         </div>
-        <div class="social-media">
+        <div class="socials-wrap">
           <p class="footer__title">Приєднуйтесь</p>
           <ul class="socials">
             <li class="socials__item">
@@ -295,10 +597,16 @@
             </li>
           </ul>
         </div>
-        <div class="subscribe">
+        <div class="subscription-wrap">
           <p class="footer__title">Підпишіться на розсилку</p>
           <form class="subscription" action="javascript:void(0);" method="POST" autocomplete="off">
-            <input class="subscription__input" name="user-email" type="email" placeholder="E-mail" required />
+            <input
+              class="subscription__input"
+              name="user-email"
+              type="email"
+              placeholder="E-mail"
+              required
+            />
             <button class="subscription__btn" type="submit">
               <span class="subscription__btn-txt">Підписатися</span
               ><svg class="subscription__icon" width="24" height="24">
@@ -308,6 +616,13 @@
           </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

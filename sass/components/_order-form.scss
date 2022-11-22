@@ -49,13 +49,21 @@
 }
 
 .order-form__check-label {
-  @extend %flex-centered;
+  display: block;
+  text-align: center;
+
+  font-size: 12px;
+  line-height: 1.17;
   margin-bottom: 30px;
 
-  line-height: 1.71;
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .order-form__check-icon {
+  vertical-align: middle;
   margin-right: 8px;
   border: 2px solid var(--checkbox-border-color);
   border-radius: 2px;

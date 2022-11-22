@@ -1,10 +1,16 @@
 .filter {
-  // @extend %flex-centered;
   display: flex;
-  // align-items: center;
-
-  margin-bottom: 50px;
+  flex-wrap: wrap;
   gap: 8px;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 .filter__btn {
   display: block;
@@ -47,12 +53,18 @@
 
 .projects__item {
   width: 100%;
+
   @media screen and (min-width: 768px) {
     width: calc((100% - 30px) / 2);
   }
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 60px) / 3);
+  }
 }
 .projects__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   outline: transparent;
 
   transition: box-shadow var(--timing-function);
@@ -107,4 +119,5 @@
 
   border: 1px solid var(--project-border-color);
   border-top: none;
+  flex-grow: 1;
 }

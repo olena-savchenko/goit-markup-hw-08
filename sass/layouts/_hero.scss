@@ -1,31 +1,42 @@
 .hero {
-  padding-top: 118px;
-  padding-bottom: 118px;
-  max-width: 100%;
-  height: auto;
+  padding: 118px 0;
   margin: 0 auto;
   background-color: var(--hero-footer-bgr);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-image: linear-gradient(var(--gradient-hero-bgr), var(--gradient-hero-bgr)),
+    url(../images/mobile/header-mobile-320.jpg);
 
-  @media screen and (min-width: 480px) {
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     background-image: linear-gradient(var(--gradient-hero-bgr), var(--gradient-hero-bgr)),
-      url(../images/hero-mobile.jpg);
+      url(../images/mobile/header-mobile-640.jpg);
   }
+
   @media screen and (min-width: 768px) {
     background-image: linear-gradient(var(--gradient-hero-bgr), var(--gradient-hero-bgr)),
-      url(../images/hero-tablet.jpg);
+      url(../images/tablet/header-tablet-320.jpg);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(var(--gradient-hero-bgr), var(--gradient-hero-bgr)),
+        url(../images/tablet/header-tablet-640.jpg);
+    }
   }
+
   @media screen and (min-width: 1200px) {
+    padding: 200px 0;
+
     background-image: linear-gradient(var(--gradient-hero-bgr), var(--gradient-hero-bgr)),
-      url(../images/hero.jpg);
+      url(../images/desktop/header-desktop-320.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(var(--gradient-hero-bgr), var(--gradient-hero-bgr)),
+        url(../images/desktop/header-desktop-640.jpg);
+    }
   }
 }
 
 .hero__title {
   display: block;
-  // max-width: 696px;
   margin: 0 auto;
   margin-bottom: 30px;
 
@@ -34,9 +45,8 @@
   text-align: center;
 
   color: var(--white-color);
-  @media screen and (min-width: 768px) {
-    max-width: 360px;
-  }
+  max-width: 360px;
+
   @media screen and (min-width: 1200px) {
     @include font(44px, 1.36, 900, 0.06em);
     max-width: 696px;
