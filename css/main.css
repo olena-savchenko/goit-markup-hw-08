@@ -622,6 +622,8 @@ body {
 
 .hero {
   padding: 118px 0;
+  max-width: 1600px;
+  height: 400px;
   margin: 0 auto;
   background-color: var(--hero-footer-bgr);
   background-size: cover;
@@ -647,6 +649,7 @@ body {
 @media screen and (min-width: 1200px) {
   .hero {
     padding: 200px 0;
+    height: 600px;
     background-image: linear-gradient(var(--gradient-hero-bgr), var(--gradient-hero-bgr)), url(../images/desktop/header-desktop-320.jpg);
   }
 }
@@ -715,8 +718,12 @@ body {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
-  text-align: center;
   color: var(--title-color);
+}
+@media screen and (max-width: 767px) {
+  .benefits__title {
+    text-align: center;
+  }
 }
 
 .benefits__txt {
@@ -866,9 +873,11 @@ body {
   }
 }
 
-.contact-wrap,
+@media screen and (max-width: 1199px) {
+  .contact-wrap,
 .socials-wrap {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+  }
 }
 
 .footer__logo {
@@ -966,6 +975,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  row-gap: 15px;
   margin-bottom: 40px;
 }
 @media screen and (min-width: 768px) {
@@ -982,7 +992,7 @@ body {
 
 .filter__btn {
   display: block;
-  padding: 6px 22px;
+  padding: 6px 25px;
   font-size: 16px;
   line-height: 1.62;
   font-weight: 500;

@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  row-gap: 15px;
   margin-bottom: 40px;
 
   @media screen and (min-width: 768px) {
@@ -14,7 +15,7 @@
 }
 .filter__btn {
   display: block;
-  padding: 6px 22px;
+  padding: 6px 25px;
 
   @include font(16px, 1.62, 500, 0.03em);
   text-align: center;

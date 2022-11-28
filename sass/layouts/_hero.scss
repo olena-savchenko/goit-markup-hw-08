@@ -1,5 +1,7 @@
 .hero {
   padding: 118px 0;
+  max-width: 1600px;
+  height: 400px;
   margin: 0 auto;
   background-color: var(--hero-footer-bgr);
   background-size: cover;
@@ -25,6 +27,7 @@
 
   @media screen and (min-width: 1200px) {
     padding: 200px 0;
+    height: 600px;
 
     background-image: linear-gradient(var(--gradient-hero-bgr), var(--gradient-hero-bgr)),
       url(../images/desktop/header-desktop-320.jpg);
